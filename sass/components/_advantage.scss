@@ -1,0 +1,62 @@
+.content {
+  display: flex;
+  text-align: start;
+  flex-wrap: wrap;
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 30px;
+    }
+  }
+}
+
+.advantage {
+  font-family: $mainFont;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  border-radius: 4px;
+  background: getBackgroundColor("light");
+
+  &__title {
+    @include font(700, 14px, 1.1, 0.03em);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+
+    @include tablet {
+      text-align: start;
+    }
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    @include font(400, 14px, 1.7, 0.03em);
+    color: getColor("secondary");
+    width: 450px;
+
+    @include tablet {
+      width: 354px;
+    }
+
+    @include desktop {
+      width: 270px;
+    }
+  }
+}

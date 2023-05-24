@@ -1,0 +1,13 @@
+.logo {
+  @include logo;
+  font-family: $secondaryFont;
+  color: getColor("accent");
+
+  &--black {
+    color: getColor("primary");
+  }
+
+  &--white {
+    color: getColor("foreground");
+  }
+}

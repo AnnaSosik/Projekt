@@ -1,0 +1,87 @@
+.footer {
+  background-color: getBackgroundColor("dark");
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    @include desktop {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+    @include tablet {
+      flex-direction: row;
+      
+    }
+
+    @include desktop {
+      flex-direction: row;
+      
+    }
+  }
+}
+
+.address {
+  @include font (500, 14px, 1.14, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  
+  }
+
+  @include desktop {
+    align-items: start;
+    text-align: left;
+  }
+
+
+  &__list {
+    margin-top: 20px;
+
+  }
+
+  &__item {
+    @include font(14px, 1.7, 0.03em);
+    color: getColor('foreground');
+    font-style: normal;
+    margin-top: 20px;
+
+  }
+
+  &__gap {
+    margin-top: 9px;
+  }
+
+  &__link {
+    font-family: $mainFont;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    line-height: 1.7;
+
+
+    transition: color 250ms getAnimation('animation');
+
+    &:is(:hover, :focus) {
+      color: getColor('accent');
+    }
+
+
+  }
+
+}

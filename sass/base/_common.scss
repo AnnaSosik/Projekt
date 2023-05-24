@@ -1,0 +1,94 @@
+body {
+  font-family: $mainFont;
+  color: getColor('primary');
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+ul,
+figure {
+  margin: 0;
+}
+
+[tabindex="0"]:focus {
+  outline: none;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+main {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+[tabindex="0"]:focus {
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    
+  }
+
+  &--hidden{
+   display: none;
+
+   @include desktop{
+    display: block;
+   }
+  }
+}
+
+.job {
+  padding-top: 0;
+}
+
+
+.container {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
+
+
+
+

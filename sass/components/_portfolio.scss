@@ -1,0 +1,102 @@
+.portfolio {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        justify-content: left;
+
+
+    }
+
+    &__item {
+        cursor: pointer;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        width: 450px;
+
+        @include tablet {
+            width: 354px;
+        }
+
+        @include desktop {
+            width: 370px;
+        }
+
+
+        &:is(:hover, :focus) {
+            box-shadow: $shadow-portfolio;
+        }
+
+        &:is(:hover, :focus) .portfolio__img--overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+
+    &__img {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+
+        &--overlay {
+            position: absolute;
+
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            @include font(400, 18px, 1.55, 0.03em);
+            background: rgba(33, 150, 243, 0.9);
+            color: getColor('foreground');
+            padding: 0 25px;
+            opacity: 1;
+            line-height: 1.55;
+            text-align: start;
+
+
+            display: flex;
+            align-items: center;
+
+            transform: translateY(100%);
+
+            transition: transform 250ms getAnimation('animation');
+        }
+
+        &>img {
+
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    &__border {
+        background-color: getColor('foreground');
+        border: 1px solid #eeeeee;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        text-align: start;
+    }
+
+    &__title {
+        @include font(700, 18px, 2, 0.06em);
+
+    }
+
+
+    &__description {
+        @include font(16px, 1.9, 0.03em);
+        color: getColor('secondary');
+        padding-top: 4px;
+
+    }
+}

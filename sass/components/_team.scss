@@ -1,0 +1,64 @@
+.team {
+    background-color: getBackgroundColor('light');
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        gap:30px;
+      
+
+        @include desktop{
+            flex-direction: row;
+        }
+
+    }
+
+    &__card {
+        background-color: getColor('foreground');
+        box-shadow: $shadow-card;
+        border-radius: 0px 0px 4px 4px;
+        width: 450px;
+
+        @include tablet
+        {
+            width: 354px;
+        }
+
+        @include desktop{
+            width: 270px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        @include title;
+
+    }
+
+    &__text {
+        color: getColor('secondary');
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+ 
+
+    &__name {
+        color: getColor('primary');
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+}

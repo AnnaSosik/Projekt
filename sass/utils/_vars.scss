@@ -1,0 +1,58 @@
+/*--font-family--*/
+
+$mainFont: Roboto, sans-serif;
+$secondaryFont: Raleway, sans-serif;
+
+$color: (
+  'primary': #212121,
+  'secondary': #757575,
+  'foreground': #fff,
+  'accent': #2196f3,
+);
+
+$background-color: (
+  'light': #f5f4fa,
+  'grey': #afb1b8,
+  'dark': #2f303a,
+  'white': #eeeeee,
+);
+
+/*--box-shadows--*/
+
+$shadow-button: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+$shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(26, 10, 10, 0.2);
+
+$shadow-portfolio: 0px 1px 1px rgba(0, 0, 0, 0.12), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+$shadow-filter: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+$shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+/*--transition--*/
+
+$animation: (
+  'animation': cubic-bezier(0.4, 0, 0.2, 1),
+);
+
+/*--function--*/
+
+@function getGrid($grd) {
+  @return map-get($grid, $grd);
+}
+
+@function getColor($col) {
+  @return map-get($color, $col);
+}
+
+@function getBackgroundColor($bgc) {
+  @return map-get($background-color, $bgc);
+}
+
+@function getBoxShadow($shdw) {
+  @return map-get($box-shadow, $shdw);
+}
+
+@function getAnimation($cbc) {
+  @return map-get($animation, $cbc);
+}

@@ -1,0 +1,56 @@
+@mixin font($weight: false, $size: false, $line: false, $letter: false) {
+  font-family: getFont($mainFont);
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $line {
+    line-height: $line;
+  }
+
+  @if $letter {
+    letter-spacing: $letter;
+  }
+}
+
+@mixin title {
+  @include font(700, 36px, 1.16, 0.03em);
+  margin-bottom: 50px;
+  text-align: center;
+  color: getColor("primary");
+}
+
+@mixin logo {
+  @include font(700, 26px, 31px, 0.03em);
+}
+
+@mixin footer-title {
+  @include font(700, 14px, 1.7, 0.03em);
+  color: getColor("foreground");
+  display: inline-block;
+  width: 207px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+@mixin hamburger-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

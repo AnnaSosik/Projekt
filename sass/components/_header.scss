@@ -1,0 +1,124 @@
+.header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ececec;
+  color: getColor("foreground");
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 83px;
+
+    @include tablet {
+      margin-left: 93px;
+    }
+  }
+}
+
+.nav-list {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+  }
+
+  @include desktop {
+  }
+
+  &__link {
+    @include font(500, 14px, 1.14);
+    font-family: $mainFont;
+    color: getColor("primary");
+    position: relative;
+    transition: color 250ms getAnimation("animation");
+
+    &:is(:hover, :focus) {
+      color: getColor("accent");
+    }
+
+    &--active {
+      color: getColor("accent");
+    }
+
+    &--active::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 4px;
+      fill: getColor("accent");
+      border-radius: 2px;
+      top: 44px;
+      background-color: getColor("accent");
+
+      @include tablet {
+        top: 45px;
+      }
+    }
+  }
+}
+
+.contact {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    @include font(500, 14px, 1.14, 0.02em);
+    text-align: left;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  &__link {
+    font-family: getFont("rob");
+    color: getColor("secondary");
+    @include font(500, 14px, 1.14, 0.02em);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    transition: color 250ms getAnimation("animation");
+
+    &:is(:hover, :focus) {
+      color: getColor("accent");
+      fill: currentColor;
+    }
+  }
+
+  &__icon {
+    background-color: getColor("foreground");
+    fill: getColor("secondary");
+
+    transition: color 250ms getAnimation("animation");
+
+    &:is(:hover, :focus) {
+      fill: getColor("accent");
+    }
+  }
+
+  .contact__link:is(:hover, :focus) > .contact__icon {
+    fill: getColor("accent");
+  }
+}

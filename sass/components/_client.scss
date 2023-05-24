@@ -1,0 +1,66 @@
+.client {
+    text-align: center;
+
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        @include desktop {
+            flex-wrap: nowrap;
+            flex-basis: auto;
+        }
+    }
+
+    &__title {
+        @include title;
+    }
+
+    &__link {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 210px;
+        height: 92px;
+        border-radius: 4px;
+        border: 1px solid getBackgroundColor('grey');
+        width: 210px;
+        height: 92px;
+        padding: 16px 52px;
+        transition: border-color 250ms getAnimation('animation');
+
+
+        @include tablet {
+            width: 226px;
+            padding: 16px 60px;
+        }
+
+        @include desktop {
+            width: 170px;
+            padding: 16px 32px;
+        }
+
+
+        &:is(:hover, :focus) {
+            border-color: getColor('accent');
+        }
+
+        &:is(:hover, :focus)>svg {
+            fill: getColor('accent');
+        }
+
+    }
+
+    &__icon {
+        fill: getBackgroundColor('grey');
+        background-color: getColor('foreground');
+
+        transition: fill 250ms getAnimation('animation');
+
+        &:is(:hover, :focus) {
+            fill: getColor('accent');
+        }
+    }
+}
