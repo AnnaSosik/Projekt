@@ -2,6 +2,7 @@
   background: none;
   border: none;
 
+
   &__icon {
     fill: getColor("primary");
     cursor: pointer;
@@ -27,6 +28,7 @@
 
   &.is-open {
     transform: translateY(0);
+
   }
 
   &__close-btn {
@@ -38,10 +40,12 @@
     fill: currentColor;
     transition: color 250ms ease;
 
+
     &:is(:hover, :focus) {
       color: getColor("accent");
     }
   }
+
 
   &__nav {
     height: 100%;
@@ -71,7 +75,8 @@
     flex-direction: column;
   }
 
-  &__tel {
+  &__tel{
+    margin-bottom: 32px;
   }
 
   &__tel--link {
@@ -79,8 +84,10 @@
     color: getColor("accent");
   }
 
-  &__mail {
-  }
+
+&__mail{
+margin-bottom: 64px;
+}
 
   &__mail--link {
     @include font(500, 24px, 1.16, 0.02em);
