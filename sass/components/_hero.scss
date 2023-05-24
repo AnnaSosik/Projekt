@@ -62,9 +62,8 @@
 }
 
 
+/*=====MOBILE=====*/
 
-
-/* 2x and 3x screens */
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 767px),
   screen and (min-resolution: 192dpi) and (min-width: 320px) and (max-width: 767px),
@@ -103,6 +102,8 @@
       url(../images/hero/section_hero_tablet@2x.jpg);
   }
 }
+
+
 /*==DESKTOP==*/
 
 @media screen and (min-width: 1200px) {
@@ -137,7 +138,5 @@
       ),
       url(../images/hero/section_hero_desktop@2x.jpg);
   }
-
-
 
 }
