@@ -41,6 +41,8 @@ a {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 nav {
@@ -55,15 +57,15 @@ nav {
   @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
-    
+
   }
 
-  &--hidden{
-   display: none;
+  &--hidden {
+    display: none;
 
-   @include desktop{
-    display: block;
-   }
+    @include desktop {
+      display: block;
+    }
   }
 }
 
@@ -87,8 +89,3 @@ nav {
     max-width: 1200px;
   }
 }
-
-
-
-
-

@@ -49,7 +49,7 @@
   &__text {
     @include font(400, 14px, 1.7, 0.03em);
     color: getColor("secondary");
-    width: 450px;
+    
 
     @include tablet {
       width: 354px;
